@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Country Data Visualization</h1>
+    <form id="selectionForm">
+        <label for="plotOption">Select Plot Option:</label>
+        <select id="plotOption" name="plotOption">
+            <optgroup label="By Country">
+                <option value="population">Population size</option>
+                <option value="borders">Number of borders</option>
+                <option value="timezones">Number of timezones</option>
+                <option value="languages">Number of languages</option>
+            </optgroup>
+            <optgroup label="By Region">
+                <option value="regionCountries">Number of countries in the region</option>
+                <option value="regionTimezones">Number of unique timezones in the region</option>
+            </optgroup>
+        </select>
+        <button type="submit">Update Chart</button>
+    </form>
+    <div id="chartContainer">
+        <div id="chart"></div>
+    </div>
+    <div id="tableContainer">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th id="valueColumn">Value</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
